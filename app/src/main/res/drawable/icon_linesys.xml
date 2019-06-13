@@ -1,0 +1,12 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/icon_click">
+
+    <target
+        android:name="line1"
+        android:animation="@animator/icon_line1" />
+
+    <!--<target-->
+        <!--android:name="line2"-->
+        <!--android:animation="@animator/icon_line2" />-->
+
+</animated-vector>
