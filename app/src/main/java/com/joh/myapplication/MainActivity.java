@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.joh.myapplication.draw.DrawActivity;
+import com.joh.myapplication.svg.SvgAnimationActivity;
+import com.joh.myapplication.system.SystemInfoActivity;
+
 /**
  * Android群英传读书笔记
  *
@@ -14,6 +18,7 @@ import android.widget.Button;
  */
 public class MainActivity extends AppCompatActivity {
 
+    Button btnDraw;
     Button btnSvg;
     Button btnSysInfo;
 
@@ -22,9 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnDraw = findViewById(R.id.btn_draw);
         btnSvg = findViewById(R.id.btn_svg);
         btnSysInfo = findViewById(R.id.btn_sys_info);
 
+        btnDraw.setOnClickListener(clickListener);
         btnSvg.setOnClickListener(clickListener);
         btnSysInfo.setOnClickListener(clickListener);
 
@@ -34,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
+                case R.id.btn_draw:
+                    //绘图处理
+                    startActivity(new Intent(getApplicationContext(), DrawActivity.class));
+                    break;
                 case R.id.btn_svg:
                     //矢量动画
                     startActivity(new Intent(getApplicationContext(), SvgAnimationActivity.class));

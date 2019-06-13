@@ -21,12 +21,23 @@
             android:text="《Android群英传》案例" />
 
         <Button
+            android:id="@+id/btn_draw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="绘图处理"
+            android:textColor="@android:color/white" />
+
+        <Button
             android:id="@+id/btn_svg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:gravity="center"
             android:padding="16dp"
+            android:layout_marginTop="10dp"
             android:text="SVG矢量动画"
             android:textColor="@android:color/white" />
 
